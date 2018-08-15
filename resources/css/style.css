@@ -16,6 +16,10 @@ div {
   margin: 0 auto;
 }
 
+h1, h4 {
+  font-weight: bold;
+}
+
 /* Header Section */
 .company {
   background-color: black;
@@ -52,14 +56,11 @@ div {
   top: 9rem;
 }
 
-h1, h4 {
-  font-weight: bold;
-}
-
 .headline h1 {
   font-size: 2rem;
   margin: 0.25rem 0;
 }
+
 
 /* Navigation Section */
 nav {
@@ -74,11 +75,30 @@ nav ul {
   padding: 0.75em 0;
 }
 
+.mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav ul {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
 /* Products Section */
 .products, .business-info {
     display: flex;
     justify-content: space-between;
     margin: 3em 0 0 0;
+}
+
+.product-image img {
+  max-width: 8rem;
 }
 
 .product {
@@ -120,4 +140,14 @@ footer {
   color: white;
   padding: 5em 0;
   margin-top: 4em;
+}
+
+@media only screen and (max-width: 1024px) {
+  .product {
+    width: 47%;
+  }
+
+  .product.glasses {
+    display: none;
+  }
 }
